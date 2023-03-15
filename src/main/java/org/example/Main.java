@@ -3,13 +3,9 @@ package org.example;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Unmarshaller;
-import org.example.DFT.Graph;
 import org.example.model.Adjacent;
-import org.example.model.PossibleRuta;
 import org.example.model.Ticket;
-import org.example.model.TrainAux;
 import org.example.model.xml.Data;
-import org.example.model.xml.Line;
 import org.example.model.xml.Station;
 import org.example.model.xml.Train;
 
@@ -24,7 +20,6 @@ public class Main {
     // In minutes
     private static final int WAIT_TIME = 60;
     private static List<Train> trains = new ArrayList<>();
-    private static List<Line> lines = new ArrayList<>();
     private static List<Station> stations = new ArrayList<>();
     private static Map<String, Set<Adjacent>> mapaBase = new HashMap<>();
 
@@ -34,103 +29,12 @@ public class Main {
         Data data = (Data) jaxbUnmarshaller.unmarshal(new File("generated-xml/tickets.xml"));
         stations = data.getStations().getStations();
         trains = data.getTrains().getTrains();
-        lines = data.getLines().getLines();
 
-        // Generar mapa base amb totes les estacions i les seves adjacents
         generarMapaBase();
+
 
         List<Ticket> finalTicketsList = new ArrayList<>();
 
-        // GRAPH TEST
-        stations.forEach(source -> {
-            stations.forEach(dest -> {
-                // Calcular possibles rutes de cada estació a cada estació excepte que source i dest siguin la mateixa estació
-                if (!source.getId().equals(dest.getId())) {
-                    Graph g = new Graph(mapaBase);
-                    System.out.println("\n\033[33m####################################################################");
-                    System.out.println("Calculant tots els possibles camins de " + source.getName() + " a " + dest.getName() + "...");
-                    System.out.println("####################################################################\033[0m");
-                    // Generar totes les rutes possibles (segons les línies que existeixen), per anar d'estació source a destination
-                    g.calculateAllPaths(source.getId(), dest.getId());
-                    List<PossibleRuta> rutesPossibles = new ArrayList<>();
-                    int routeIndex = 0; //Index to keep track of the route we are iterating
-                    for(List<String> ruta: g.getLlistaFinal()) {
-//                        System.out.println(routeIndex+" -> "+ruta);
-                        // Duració trajecte
-                        int duracioBase = 0;
-                        for (int i = 0; i < ruta.size() - 1; i++) {
-                            duracioBase += getDuracio(ruta.get(i), ruta.get(i + 1));
-                        }
-                        // Temps d'espera
-                        Map<Train,Integer> tempsEsperaList = new HashMap<>();
-                        System.out.println("Calculant els temps d'espera per la ruta "+routeIndex+"...");
-                        // Passar-li llista pq la vagi omplint amb la ruta de trens
-                        List<Train> rutaTrens = new ArrayList<>();
-                        calculateTempsEspera(tempsEsperaList, ruta, routeIndex);
-
-//                        System.out.print("\033[34m" + duracioBase + " min.\033[0m | ");
-//                        System.out.print("\033[32m" + ruta + "\033[0m \n");
-                        rutesPossibles.add(new PossibleRuta(ruta, duracioBase,tempsEsperaList));
-
-                        routeIndex++;
-                    }
-
-//                    System.out.println("RUTES POSSIBLES ------------------------------------->");
-//                    rutesPossibles.forEach(possibleRuta -> {
-//                        System.out.println("Ruta->"+possibleRuta.getRuta());
-//                        System.out.println("Hores->");
-//                        possibleRuta.getTempsEsperaList().forEach((train, integer) -> {
-//                            System.out.println(train+" --- "+integer);
-//                        });
-//                    });
-//                    System.out.println("<----------------------------------RUTES POSSIBLES");
-
-                    // Dona'm la quickest path per cada hora de cada tren
-                    Map<String, TrainAux> totalWaitTime = new HashMap<>();
-                    rutesPossibles.forEach(possibleRuta -> {
-                        possibleRuta.getTempsEsperaList().forEach((train, duration) -> {
-                            String depTimeAux = train.getDepartureTime().split(",")[1].trim();
-                            int thisDuracioTotal = possibleRuta.getBaseDuration()+duration;
-                            if(!totalWaitTime.containsKey(depTimeAux)) {
-                                totalWaitTime.put(depTimeAux, new TrainAux(thisDuracioTotal,train,possibleRuta.getRuta()));
-                            } else {
-                                // Mira'm si aquest és més petit que el que ja tenim, si si, posa'm al map aquest i elimina el que hi havia
-                                if(totalWaitTime.get(depTimeAux).getDuracioTotal() > thisDuracioTotal){
-                                    totalWaitTime.put(depTimeAux, new TrainAux(thisDuracioTotal,train,possibleRuta.getRuta()));
-                                }
-                            }
-                        });
-                    });
-
-                    System.out.println("### QUICKEST PATH FOR "+source+"-"+dest+" ###");
-                    totalWaitTime.forEach((s, trainAux) -> {
-                        System.out.println("At "+s+": "+trainAux.getTrain()+"\nWith duration of: "+trainAux.getDuracioTotal()+"\nRoute: "+trainAux.getRutaEstacions());
-                        // Obtenir llista de trens a partir de la llista d'estacions, tenint en compte el primer train.
-                        List<Train> llistaFinal = getTrainListFollowingRoute(trainAux.getRutaEstacions(), trainAux.getTrain());
-                        System.out.println("Ruta estacions->"+trainAux.getRutaEstacions());
-                        System.out.println("Ruta trens->"+llistaFinal);
-                        finalTicketsList.add(
-                                new Ticket(
-                                        source.getId(), //departureStationId
-                                        trainAux.getTrain().getDepartureTime(),
-                                        dest.getId(), //arrivalStationId
-//                                        llistaFinal.get(llistaFinal.size()-1).getArrivalTime(),
-                                        llistaFinal
-                                )
-                        );
-                    });
-
-
-
-                }
-            });
-        });
-
-        System.out.println("-------------------FINAAAAAAAAAAAAAAAL-------------------");
-        finalTicketsList.forEach(ticket -> {
-            System.out.println("\nTicket from "+ticket.getDepartureStationId()+" to "+ticket.getArrivalStationId()+" at "+ticket.getDepartureTime());
-            System.out.println("With route "+ticket.getTrainsList());
-        });
 
         //Djikstra al final segurament sobri
 //        List<TmpData> tmpData = new ArrayList<>();
@@ -142,6 +46,122 @@ public class Main {
 //            DijkstraApp.run(estacio.getId(), tmpData);
 //        }
 
+    }
+
+    private static void generarMapaBase() {
+        stations.forEach(station -> {
+            System.out.println("======================================================");
+            // Obtenir trens que surten d'aquí
+            List<Train> llistaBase = getAllTrainsLeavingFromStation(station.getId());
+            System.out.println("Trens sortint de "+station.getName()+":");
+            llistaBase.forEach(train -> {
+                System.out.println("\t"+train);
+            });
+            for (Train t : llistaBase) {
+                System.out.println("Generant mapa per "+t+"...");
+                Map<Station, List<Adjacent>> mapa = new HashMap<>();
+                mapa.put(station, new ArrayList<>());
+                System.out.println(station.getName()+" afegit al mapa");
+                mapa.get(station).add(new Adjacent(t.getArrivalStation(), t, t.getDuration()));
+                System.out.println(t.getArrivalStation()+" afegit al mapa com a adjacent amb duració de "+t.getDuration());
+                // Estacio arribada
+
+                System.out.println("Inici de recursiva");
+                recursivaTest(t, mapa);
+
+                System.out.println("=============================================");
+                System.out.println("MAPA FINAL");
+                System.out.println("=============================================");
+                mapa.forEach((s, adj) -> {
+                    System.out.println(s.getName()+" -> ");
+                    adj.forEach(adjacent -> {
+                        System.out.println("\t"+adjacent);
+                    });
+                });
+            }
+        });
+    }
+
+    private static void recursivaTest(Train previousTrain, Map<Station,List<Adjacent>> mapa) {
+        System.out.println("---Obtenint trens vàlids desde "+previousTrain.getArrivalStation());
+        List<Train> llistaTrens = getValidTrains(previousTrain.getArrivalStation(), previousTrain.getArrivalTime());
+        // Si hem arribat a una estacio final, atura la funció recursiva
+        if (llistaTrens.isEmpty()) {
+            System.out.println("No s'han trobat trens, sortint de la recursiva...");
+            System.out.println("Afegint "+previousTrain.getArrivalStation()+" al mapa, sense adjacents abans de sortir...");
+            mapa.put(previousTrain.getArrivalStation(),new ArrayList<>());
+            System.out.println("Sortint...");
+            return;
+        }
+
+        for (Train t : llistaTrens) {
+            System.out.println("Iterant sobre tren "+t);
+            if (!mapa.containsKey(t.getDepartureStation())) {
+                System.out.println("Estació "+t.getDepartureStation()+" no existeix al mapa, afegint-la...");
+                mapa.put(t.getDepartureStation(), new ArrayList<>());
+            }
+            // Canviar això a un parse de data ben fet (preguntar Pau)
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy, HH:mm:ss");
+            LocalDateTime arrivalTime = LocalDateTime.parse(t.getArrivalTime(), formatter);
+            LocalDateTime prevStationArrTime = LocalDateTime.parse(previousTrain.getArrivalTime(), formatter);
+            int tempsTrajecteiEspera = (int) Math.abs(ChronoUnit.MINUTES.between(arrivalTime, prevStationArrTime));
+
+            //Obtenir llista adjacents de la estacio actual
+            System.out.println("Obtenint llista adjacents del mapa...");
+            List<Adjacent> adjacentsEstacioAcual = mapa.get(t.getDepartureStation());
+            for (Adjacent a : adjacentsEstacioAcual) {
+                if (a.getEstacio().equals(t.getArrivalStation()) &&
+                        a.getCost() > tempsTrajecteiEspera) {
+                    a.setCost(tempsTrajecteiEspera);
+                    a.setTrain(t);
+                }
+            }
+            // Si encara no hem passat per la adjacent (estacio2), afegeix-la directament
+            if (!mapa.containsKey(t.getArrivalStation())) {
+                mapa.get(t.getDepartureStation()).add(new Adjacent(t.getArrivalStation(), t, tempsTrajecteiEspera));
+            } else { // Si ja la tenim, mirar si el cost és superior que el d'ara, i substituir-lo
+                List<Adjacent> llistaadjacents = mapa.get(t.getDepartureStation());
+                for(Adjacent a: llistaadjacents) {
+                    if(a.getEstacio().equals(t.getArrivalStation()) &&
+                            a.getCost() > tempsTrajecteiEspera){
+                        a.setCost(tempsTrajecteiEspera);
+                        a.setTrain(t);
+                        break;
+                    }
+                }
+            }
+            System.out.println("Mapa fins ara...");
+            System.out.println("=============================================");
+            mapa.forEach((s, adj) -> {
+                System.out.println(s.getName()+" -> ");
+                adj.forEach(adjacent -> {
+                    System.out.println("\t"+adjacent);
+                });
+            });
+            System.out.println("=============================================");
+
+            // Estacio arribada
+            recursivaTest(t, mapa);
+        }
+    }
+
+    private static List<Train> getValidTrains(Station station, String time) {
+        List<Train> llista = new ArrayList<>();
+        getAllTrainsLeavingFromStation(station.getId()).forEach(t -> {
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy, HH:mm:ss");
+            LocalDateTime departureTime = LocalDateTime.parse(t.getDepartureTime(), formatter);
+            LocalDateTime prevStationArrTime = LocalDateTime.parse(time, formatter);
+
+            // Si el tren en qüestió encara no ha sortit quan naltros arribem
+            // llavors afegeix el tren a la llista de vàlids
+            if (!departureTime.isBefore(prevStationArrTime)) {
+                System.out.println("Tren "+t+" és vàlid. Afegint a llista vàlids");
+                llista.add(t);
+            } else {
+                System.out.println("Tren "+t+" NO vàlid. Descartat.");
+            }
+        });
+        return llista;
     }
 
     private static List<Train> getTrainListFollowingRoute(List<String> rutaEstacions, Train primerTrain) {
@@ -161,7 +181,7 @@ public class Main {
         List<Train> trainsAux = getAllTrainsGoingFromTo(rutaEstacions.get(i), rutaEstacions.get(i + 1));
         i++; // Posicionem el cursor a la següent estació
         String prevArrivalTime = primerTrain.getArrivalTime(); // Guardem la hora d'arribada a la segona estació
-        for(;i<rutaEstacions.size()-1;i++){
+        for (; i < rutaEstacions.size() - 1; i++) {
             // Obtenir el primer tren que surt de la ith estació cap a la ith+1 estació
             Train winnerTrain = null;
             String winnerArrivalTime = "";
@@ -182,7 +202,7 @@ public class Main {
             }
 
             rutaTrens.add(winnerTrain);
-            if(prevArrivalTime.equals("")) break; // Si hem arribat al final, sortim
+            if (prevArrivalTime.equals("")) break; // Si hem arribat al final, sortim
 
             prevArrivalTime = prevArrivalTime; //netejar per la següent iteració
         }
@@ -203,7 +223,7 @@ public class Main {
         List<Train> trains = getAllTrainsGoingFromTo(ruta.get(i), ruta.get(i + 1));
         if (ruta.size() <= 2) {
             // Si només hi ha 2 estacions a la ruta (o cap), vol dir que no hi haurà transbord, per tant el temps d'espera serà 0
-            tempsEsperaList.put(trains.get(0),0);
+            tempsEsperaList.put(trains.get(0), 0);
             // Sortim, perquè ja no hi ha més estacions a la ruta
             return;
         }
@@ -216,10 +236,10 @@ public class Main {
 
         for (Train t : trains) {
             int tempsEspera = calculateTempsEsperaRecursive(ruta, t.getArrivalTime(), i);
-            if(tempsEspera != -1) {//Mentre no haguem arribat al final
+            if (tempsEspera != -1) {//Mentre no haguem arribat al final
                 //tempsEsperaList.add(t.getId(), tempsEspera);
                 System.out.println("Temps espera per Ruta " + routeIndex + " amb tren inici " + t + ": " + tempsEspera);
-                tempsEsperaList.put(t,tempsEspera);
+                tempsEsperaList.put(t, tempsEspera);
             }
         }
     }
@@ -227,7 +247,7 @@ public class Main {
     private static int calculateTempsEsperaRecursive(List<String> ruta, String prevArrivalTime, int i) {
         // SI hem arribat al punt on (i == última estació) que retorni 0 com a temps d'espera d'aquest tram, perquè ja és
         // la última estació, i quan baixes ja no fas cap transbord més.
-        if (i >= ruta.size()-1) return 0;
+        if (i >= ruta.size() - 1) return 0;
 
         LocalDateTime minimumDepartureTime = LocalDateTime.MAX;
         String winnerArrivalTime = "";
@@ -253,46 +273,14 @@ public class Main {
         // Calculem temps d'espera ara que ja sabem quin és el tren guanyador
         int tempsEspera = (int) Math.abs(ChronoUnit.MINUTES.between(minimumDepartureTime, prevTrainArrTime));
 
-        if(winnerArrivalTime.equals("")) return -1;
+        if (winnerArrivalTime.equals("")) return -1;
         return tempsEspera + calculateTempsEsperaRecursive(ruta, winnerArrivalTime, i);
     }
 
-    private static int getDuracio(String depStationId, String arrStationId) {
-        for (Line l : lines) {
-            if (l.getDepartureStation().getId().equals(depStationId) && l.getArrivalStation().getId().equals(arrStationId)) {
-                return l.getDuration();
-            }
-        }
-        return -1;
-    }
 
-    private static List<Train> getValidTrains(String stationId, String time) {
-        List<Train> llista = new ArrayList<>();
-        getAllTrainsLeavingFromStation(stationId).forEach(t -> {
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy, HH:mm:ss");
-            LocalDateTime departureTime = LocalDateTime.parse(t.getDepartureTime(), formatter);
-            LocalDateTime prevStationArrTime = LocalDateTime.parse(time, formatter);
 
-            // Si el tren en qüestió ja ha sortit quan naltros arribem
-            // o el passatger s'ha d'esperar més de WAIT_TIME,
-            // llavors marca la línia com a invàlida
-            if (departureTime.isBefore(prevStationArrTime) || (ChronoUnit.MINUTES.between(departureTime, prevStationArrTime) > WAIT_TIME)) {
-                t.setValid(false);
-            }
-            llista.add(t);
 
-        });
-        return llista;
-    }
 
-    private static void generarMapaBase() {
-        stations.forEach(station -> {
-            // Obtenir estacions adjacents
-            Set<Adjacent> nextStations = getAdjacentStationsFromStation(station.getId());
-            // Afegir-les al mapa com a valor de la seva clau corresponent
-            mapaBase.put(station.getId(), nextStations);
-        });
-    }
 
     /*
         public static void processParent(List<Train> list) {
@@ -327,15 +315,15 @@ public class Main {
 
 
      */
-    private static Set<Adjacent> getAdjacentStationsFromStation(String stationId) {
-        // Utilitzem un Set i no una List, perquè no volem tenir estacions repetides
-        // Si tenim una llista amb 3 trains que van cap a Lausane, llavors acabaríem tenint una llista amb 3 estacions Lausane
-        Set<Adjacent> nextStations = new HashSet<>();
-        getAllTrainsLeavingFromStation(stationId).forEach(train -> {
-            nextStations.add(new Adjacent(train.getLine().getArrivalStation().getId(), train.getLine().getDuration()));
-        });
-        return nextStations;
-    }
+//    private static Set<Adjacent> getAdjacentStationsFromStation(String stationId) {
+//        // Utilitzem un Set i no una List, perquè no volem tenir estacions repetides
+//        // Si tenim una llista amb 3 trains que van cap a Lausane, llavors acabaríem tenint una llista amb 3 estacions Lausane
+//        Set<Adjacent> nextStations = new HashSet<>();
+//        getAllTrainsLeavingFromStation(stationId).forEach(train -> {
+//            nextStations.add(new Adjacent(train.getArrivalStation().getId(), train.getDuration()));
+//        });
+//        return nextStations;
+//    }
 
     /*
         public static void processChild(Map<String, List<Adjacent>> map, List<Train> list) {
@@ -374,15 +362,15 @@ public class Main {
 
      */
     // Funció per afegir elements d'una llista a una altra llista, assegurant-nos que no hi ha cap element repetit
-    private static void addAdjacentStationToStationInMap(Map<String, List<Adjacent>> map, String key, List<Train> elementsToAdd) {
-        List<Adjacent> llista = map.get(key);
-        elementsToAdd.forEach(train -> {
-            Adjacent a = new Adjacent(train.getLine().getDepartureStation().getId(), train.getLine().getDuration());
-            if (!llista.contains(a)) {
-                llista.add(a);
-            }
-        });
-    }
+//    private static void addAdjacentStationToStationInMap(Map<String, List<Adjacent>> map, String key, List<Train> elementsToAdd) {
+//        List<Adjacent> llista = map.get(key);
+//        elementsToAdd.forEach(train -> {
+//            Adjacent a = new Adjacent(train.getDepartureStation().getId(), train.getDuration());
+//            if (!llista.contains(a)) {
+//                llista.add(a);
+//            }
+//        });
+//    }
 
 //    public static void generateMapForTrain(Train t) {
 //        // Get valid trains from current train
@@ -393,7 +381,7 @@ public class Main {
     private static List<Train> getAllTrainsLeavingFromStation(String stationId) {
         List<Train> llista = new ArrayList<>();
         trains.forEach(t -> {
-            if (t.getLine().getDepartureStation().getId().equals(stationId))
+            if (t.getDepartureStation().getId().equals(stationId))
                 llista.add(t);
         });
         return llista;
@@ -402,7 +390,7 @@ public class Main {
     private static List<Train> getAllTrainsGoingFromTo(String depStationId, String arrStationId) {
         List<Train> llista = new ArrayList<>();
         trains.forEach(t -> {
-            if (t.getLine().getDepartureStation().getId().equals(depStationId) && t.getLine().getArrivalStation().getId().equals(arrStationId))
+            if (t.getDepartureStation().getId().equals(depStationId) && t.getArrivalStation().getId().equals(arrStationId))
                 llista.add(t);
         });
         return llista;

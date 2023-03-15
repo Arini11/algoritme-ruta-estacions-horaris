@@ -1,1037 +1,401 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <data>
-    <lines>
-        <line>
-            <id>35ed8420-7674-42f8-ac40-30172455fe46</id>
-            <name>LAU-BAS</name>
-            <duration>120</duration>
-            <departureStation>
-                <id>217d0649-0d25-40bf-a864-094aae065264</id>
+    <trains>
+        <train id="24e7b3c8-e7af-4296-8a00-1f46213afc68">
+            <departureTime>10-03-2023, 16:50:00</departureTime>
+            <arrivalTime>10-03-2023, 18:00:00</arrivalTime>
+            <departureStation id="217d0649-0d25-40bf-a864-094aae065264">
                 <name>Lausane</name>
             </departureStation>
-            <arrivalStation>
-                <id>7af1c55d-c627-434a-b350-419666745bd4</id>
-                <name>Basel</name>
+            <arrivalStation id="64fa53e3-0344-416b-a995-0cd21e306378">
+                <name>Bern</name>
             </arrivalStation>
-        </line>
-        <line>
-            <id>6352ed06-9bbc-4e1b-a2c4-b20ef8d38f15</id>
-            <name>GEN-LAU</name>
-            <duration>35</duration>
-            <departureStation>
-                <id>ddbd9179-3d5d-4079-9fab-806ef268e0cb</id>
+            <availableSeats>140</availableSeats>
+        </train>
+        <train id="2e9a5359-80e2-43fe-8395-56822aad8778">
+            <departureTime>10-03-2023, 08:00:00</departureTime>
+            <arrivalTime>10-03-2023, 08:35:00</arrivalTime>
+            <departureStation id="ddbd9179-3d5d-4079-9fab-806ef268e0cb">
                 <name>Geneva</name>
             </departureStation>
-            <arrivalStation>
-                <id>217d0649-0d25-40bf-a864-094aae065264</id>
+            <arrivalStation id="217d0649-0d25-40bf-a864-094aae065264">
                 <name>Lausane</name>
             </arrivalStation>
-        </line>
-        <line>
-            <id>c528a4e9-dc1b-4e27-a09c-e63ec8a4ddaf</id>
-            <name>LAU-BER</name>
-            <duration>70</duration>
-            <departureStation>
-                <id>217d0649-0d25-40bf-a864-094aae065264</id>
+            <availableSeats>140</availableSeats>
+        </train>
+        <train id="8d9a7dfe-656c-4aa4-8cef-33b7df4e962b">
+            <departureTime>10-03-2023, 16:00:00</departureTime>
+            <arrivalTime>10-03-2023, 16:35:00</arrivalTime>
+            <departureStation id="ddbd9179-3d5d-4079-9fab-806ef268e0cb">
+                <name>Geneva</name>
+            </departureStation>
+            <arrivalStation id="217d0649-0d25-40bf-a864-094aae065264">
+                <name>Lausane</name>
+            </arrivalStation>
+            <availableSeats>140</availableSeats>
+        </train>
+        <train id="56b7b426-7881-4e49-bcc4-7c58fbf2f61e">
+            <departureTime>10-03-2023, 22:00:00</departureTime>
+            <arrivalTime>10-03-2023, 22:35:00</arrivalTime>
+            <departureStation id="ddbd9179-3d5d-4079-9fab-806ef268e0cb">
+                <name>Geneva</name>
+            </departureStation>
+            <arrivalStation id="217d0649-0d25-40bf-a864-094aae065264">
+                <name>Lausane</name>
+            </arrivalStation>
+            <availableSeats>140</availableSeats>
+        </train>
+        <train id="b8be2caf-7a04-44f5-ab16-5dbc5d2afc86">
+            <departureTime>10-03-2023, 08:45:00</departureTime>
+            <arrivalTime>10-03-2023, 10:05:00</arrivalTime>
+            <departureStation id="217d0649-0d25-40bf-a864-094aae065264">
                 <name>Lausane</name>
             </departureStation>
-            <arrivalStation>
-                <id>64fa53e3-0344-416b-a995-0cd21e306378</id>
+            <arrivalStation id="0c091216-e803-4545-8bfe-9f4b3025750b">
+                <name>Sion</name>
+            </arrivalStation>
+            <availableSeats>140</availableSeats>
+        </train>
+        <train id="d1fb0da6-0d50-4e15-80da-e3bc0fb0808e">
+            <departureTime>10-03-2023, 22:50:00</departureTime>
+            <arrivalTime>11-03-2023, 00:00:00</arrivalTime>
+            <departureStation id="217d0649-0d25-40bf-a864-094aae065264">
+                <name>Lausane</name>
+            </departureStation>
+            <arrivalStation id="64fa53e3-0344-416b-a995-0cd21e306378">
                 <name>Bern</name>
             </arrivalStation>
-        </line>
-        <line>
-            <id>ca7580c8-f302-4e89-a23a-d35075b5f103</id>
-            <name>CHU-LUG</name>
-            <duration>160</duration>
-            <departureStation>
-                <id>b2f21606-4e95-4c6d-baac-39c4d502c73d</id>
+            <availableSeats>140</availableSeats>
+        </train>
+        <train id="877a9767-3802-40c7-8be0-a9067342e62b">
+            <departureTime>10-03-2023, 08:55:00</departureTime>
+            <arrivalTime>10-03-2023, 10:55:00</arrivalTime>
+            <departureStation id="217d0649-0d25-40bf-a864-094aae065264">
+                <name>Lausane</name>
+            </departureStation>
+            <arrivalStation id="7af1c55d-c627-434a-b350-419666745bd4">
+                <name>Basel</name>
+            </arrivalStation>
+            <availableSeats>140</availableSeats>
+        </train>
+        <train id="51bfe9f0-df45-4e82-b564-a7c015d3b7d6">
+            <departureTime>11-03-2023, 00:30:00</departureTime>
+            <arrivalTime>11-03-2023, 02:10:00</arrivalTime>
+            <departureStation id="0c091216-e803-4545-8bfe-9f4b3025750b">
+                <name>Sion</name>
+            </departureStation>
+            <arrivalStation id="64fa53e3-0344-416b-a995-0cd21e306378">
+                <name>Bern</name>
+            </arrivalStation>
+            <availableSeats>140</availableSeats>
+        </train>
+        <train id="40a17030-8082-46fc-905c-088beb213f1b">
+            <departureTime>10-03-2023, 08:50:00</departureTime>
+            <arrivalTime>10-03-2023, 10:00:00</arrivalTime>
+            <departureStation id="217d0649-0d25-40bf-a864-094aae065264">
+                <name>Lausane</name>
+            </departureStation>
+            <arrivalStation id="64fa53e3-0344-416b-a995-0cd21e306378">
+                <name>Bern</name>
+            </arrivalStation>
+            <availableSeats>140</availableSeats>
+        </train>
+        <train id="c3b8a77f-b8d0-4abd-b176-d24940a1534f">
+            <departureTime>10-03-2023, 16:55:00</departureTime>
+            <arrivalTime>10-03-2023, 18:55:00</arrivalTime>
+            <departureStation id="217d0649-0d25-40bf-a864-094aae065264">
+                <name>Lausane</name>
+            </departureStation>
+            <arrivalStation id="7af1c55d-c627-434a-b350-419666745bd4">
+                <name>Basel</name>
+            </arrivalStation>
+            <availableSeats>140</availableSeats>
+        </train>
+        <train id="6985ef46-db90-4acc-92c7-63f40e3273eb">
+            <departureTime>10-03-2023, 22:55:00</departureTime>
+            <arrivalTime>11-03-2023, 00:55:00</arrivalTime>
+            <departureStation id="217d0649-0d25-40bf-a864-094aae065264">
+                <name>Lausane</name>
+            </departureStation>
+            <arrivalStation id="7af1c55d-c627-434a-b350-419666745bd4">
+                <name>Basel</name>
+            </arrivalStation>
+            <availableSeats>140</availableSeats>
+        </train>
+        <train id="a7d2afbc-5a1a-4b70-9ebe-35a948029090">
+            <departureTime>10-03-2023, 10:25:00</departureTime>
+            <arrivalTime>10-03-2023, 12:55:00</arrivalTime>
+            <departureStation id="64fa53e3-0344-416b-a995-0cd21e306378">
+                <name>Bern</name>
+            </departureStation>
+            <arrivalStation id="b2f21606-4e95-4c6d-baac-39c4d502c73d">
+                <name>Chur</name>
+            </arrivalStation>
+            <availableSeats>140</availableSeats>
+        </train>
+        <train id="442d1638-4096-4ebb-a393-1b95af10c974">
+            <departureTime>10-03-2023, 22:45:00</departureTime>
+            <arrivalTime>11-03-2023, 00:05:00</arrivalTime>
+            <departureStation id="217d0649-0d25-40bf-a864-094aae065264">
+                <name>Lausane</name>
+            </departureStation>
+            <arrivalStation id="0c091216-e803-4545-8bfe-9f4b3025750b">
+                <name>Sion</name>
+            </arrivalStation>
+            <availableSeats>140</availableSeats>
+        </train>
+        <train id="b5169947-308b-4f11-bc81-c2010a0dc185">
+            <departureTime>10-03-2023, 11:40:00</departureTime>
+            <arrivalTime>10-03-2023, 14:20:00</arrivalTime>
+            <departureStation id="b2f21606-4e95-4c6d-baac-39c4d502c73d">
                 <name>Chur</name>
             </departureStation>
-            <arrivalStation>
-                <id>02c605dc-b0ef-4c2a-a19f-e25f087e6d36</id>
+            <arrivalStation id="02c605dc-b0ef-4c2a-a19f-e25f087e6d36">
                 <name>Lugano</name>
             </arrivalStation>
-        </line>
-        <line>
-            <id>c46f4c7e-3f49-4fec-b736-f5ff80369a87</id>
-            <name>BER-BAS</name>
-            <duration>60</duration>
-            <departureStation>
-                <id>64fa53e3-0344-416b-a995-0cd21e306378</id>
+            <availableSeats>140</availableSeats>
+        </train>
+        <train id="0702e6a9-dc16-44b0-972e-4f5fee48abdf">
+            <departureTime>10-03-2023, 19:40:00</departureTime>
+            <arrivalTime>10-03-2023, 22:20:00</arrivalTime>
+            <departureStation id="b2f21606-4e95-4c6d-baac-39c4d502c73d">
+                <name>Chur</name>
+            </departureStation>
+            <arrivalStation id="02c605dc-b0ef-4c2a-a19f-e25f087e6d36">
+                <name>Lugano</name>
+            </arrivalStation>
+            <availableSeats>140</availableSeats>
+        </train>
+        <train id="b89673a0-147f-4c52-8788-10a8898e7017">
+            <departureTime>11-03-2023, 01:40:00</departureTime>
+            <arrivalTime>11-03-2023, 04:20:00</arrivalTime>
+            <departureStation id="b2f21606-4e95-4c6d-baac-39c4d502c73d">
+                <name>Chur</name>
+            </departureStation>
+            <arrivalStation id="02c605dc-b0ef-4c2a-a19f-e25f087e6d36">
+                <name>Lugano</name>
+            </arrivalStation>
+            <availableSeats>140</availableSeats>
+        </train>
+        <train id="655ffa4b-281d-41c2-8561-46f6ce454d77">
+            <departureTime>10-03-2023, 10:35:00</departureTime>
+            <arrivalTime>10-03-2023, 11:35:00</arrivalTime>
+            <departureStation id="64fa53e3-0344-416b-a995-0cd21e306378">
                 <name>Bern</name>
             </departureStation>
-            <arrivalStation>
-                <id>7af1c55d-c627-434a-b350-419666745bd4</id>
+            <arrivalStation id="7af1c55d-c627-434a-b350-419666745bd4">
                 <name>Basel</name>
             </arrivalStation>
-        </line>
-        <line>
-            <id>dbb30547-91d6-40a6-9e86-480a09e3ad31</id>
-            <name>SIO-BER</name>
-            <duration>100</duration>
-            <departureStation>
-                <id>0c091216-e803-4545-8bfe-9f4b3025750b</id>
+            <availableSeats>140</availableSeats>
+        </train>
+        <train id="588bc2f7-cf1d-4631-8888-2cdbe9b9d0e3">
+            <departureTime>10-03-2023, 18:35:00</departureTime>
+            <arrivalTime>10-03-2023, 19:35:00</arrivalTime>
+            <departureStation id="64fa53e3-0344-416b-a995-0cd21e306378">
+                <name>Bern</name>
+            </departureStation>
+            <arrivalStation id="7af1c55d-c627-434a-b350-419666745bd4">
+                <name>Basel</name>
+            </arrivalStation>
+            <availableSeats>140</availableSeats>
+        </train>
+        <train id="629bc7d6-0ab1-4b43-a0ee-a0a96d00c3a6">
+            <departureTime>10-03-2023, 18:30:00</departureTime>
+            <arrivalTime>10-03-2023, 20:10:00</arrivalTime>
+            <departureStation id="0c091216-e803-4545-8bfe-9f4b3025750b">
                 <name>Sion</name>
             </departureStation>
-            <arrivalStation>
-                <id>64fa53e3-0344-416b-a995-0cd21e306378</id>
+            <arrivalStation id="64fa53e3-0344-416b-a995-0cd21e306378">
                 <name>Bern</name>
             </arrivalStation>
-        </line>
-        <line>
-            <id>324f76f2-4ab1-42d3-9340-4f62ec4b3da2</id>
-            <name>BER-ZUR</name>
-            <duration>90</duration>
-            <departureStation>
-                <id>64fa53e3-0344-416b-a995-0cd21e306378</id>
+            <availableSeats>140</availableSeats>
+        </train>
+        <train id="1b3d18af-7f6c-471b-9c1a-1a6c0d94bee5">
+            <departureTime>10-03-2023, 18:25:00</departureTime>
+            <arrivalTime>10-03-2023, 20:55:00</arrivalTime>
+            <departureStation id="64fa53e3-0344-416b-a995-0cd21e306378">
                 <name>Bern</name>
             </departureStation>
-            <arrivalStation>
-                <id>4774daab-5998-4c10-8d38-17fe7754a32a</id>
-                <name>Zürich</name>
-            </arrivalStation>
-        </line>
-        <line>
-            <id>149906f7-7dfc-4520-8663-8aa76a6da4f9</id>
-            <name>ZUR-CHU</name>
-            <duration>95</duration>
-            <departureStation>
-                <id>4774daab-5998-4c10-8d38-17fe7754a32a</id>
-                <name>Zürich</name>
-            </departureStation>
-            <arrivalStation>
-                <id>b2f21606-4e95-4c6d-baac-39c4d502c73d</id>
+            <arrivalStation id="b2f21606-4e95-4c6d-baac-39c4d502c73d">
                 <name>Chur</name>
             </arrivalStation>
-        </line>
-        <line>
-            <id>10e294d0-9604-4aa9-bd0e-626c44160e66</id>
-            <name>BAS-ZUR</name>
-            <duration>60</duration>
-            <departureStation>
-                <id>7af1c55d-c627-434a-b350-419666745bd4</id>
+            <availableSeats>140</availableSeats>
+        </train>
+        <train id="2fbf38d8-72fb-4300-a34b-97cf3c7d93e6">
+            <departureTime>11-03-2023, 02:25:00</departureTime>
+            <arrivalTime>11-03-2023, 04:00:00</arrivalTime>
+            <departureStation id="4774daab-5998-4c10-8d38-17fe7754a32a">
+                <name>Zürich</name>
+            </departureStation>
+            <arrivalStation id="b2f21606-4e95-4c6d-baac-39c4d502c73d">
+                <name>Chur</name>
+            </arrivalStation>
+            <availableSeats>140</availableSeats>
+        </train>
+        <train id="2271fd9f-7f77-41d9-9634-ec685fe58ce3">
+            <departureTime>10-03-2023, 11:30:00</departureTime>
+            <arrivalTime>10-03-2023, 12:30:00</arrivalTime>
+            <departureStation id="7af1c55d-c627-434a-b350-419666745bd4">
                 <name>Basel</name>
             </departureStation>
-            <arrivalStation>
-                <id>4774daab-5998-4c10-8d38-17fe7754a32a</id>
+            <arrivalStation id="4774daab-5998-4c10-8d38-17fe7754a32a">
                 <name>Zürich</name>
             </arrivalStation>
-        </line>
-        <line>
-            <id>5d228204-77a9-43ba-bdfb-a6f9bbb60493</id>
-            <name>LAU-SIO</name>
-            <duration>80</duration>
-            <departureStation>
-                <id>217d0649-0d25-40bf-a864-094aae065264</id>
+            <availableSeats>140</availableSeats>
+        </train>
+        <train id="7b085934-8ff7-4c0d-ba13-fcd30369b065">
+            <departureTime>11-03-2023, 00:35:00</departureTime>
+            <arrivalTime>11-03-2023, 01:35:00</arrivalTime>
+            <departureStation id="64fa53e3-0344-416b-a995-0cd21e306378">
+                <name>Bern</name>
+            </departureStation>
+            <arrivalStation id="7af1c55d-c627-434a-b350-419666745bd4">
+                <name>Basel</name>
+            </arrivalStation>
+            <availableSeats>140</availableSeats>
+        </train>
+        <train id="3809197f-1175-412d-a0e5-45b40838af98">
+            <departureTime>10-03-2023, 10:30:00</departureTime>
+            <arrivalTime>10-03-2023, 12:10:00</arrivalTime>
+            <departureStation id="0c091216-e803-4545-8bfe-9f4b3025750b">
+                <name>Sion</name>
+            </departureStation>
+            <arrivalStation id="64fa53e3-0344-416b-a995-0cd21e306378">
+                <name>Bern</name>
+            </arrivalStation>
+            <availableSeats>140</availableSeats>
+        </train>
+        <train id="f5870048-b273-4d91-b107-ba607ee98a3b">
+            <departureTime>10-03-2023, 10:40:00</departureTime>
+            <arrivalTime>10-03-2023, 12:10:00</arrivalTime>
+            <departureStation id="64fa53e3-0344-416b-a995-0cd21e306378">
+                <name>Bern</name>
+            </departureStation>
+            <arrivalStation id="4774daab-5998-4c10-8d38-17fe7754a32a">
+                <name>Zürich</name>
+            </arrivalStation>
+            <availableSeats>140</availableSeats>
+        </train>
+        <train id="e7860e8d-b284-4ed7-a406-b15684827e1f">
+            <departureTime>10-03-2023, 18:40:00</departureTime>
+            <arrivalTime>10-03-2023, 20:10:00</arrivalTime>
+            <departureStation id="64fa53e3-0344-416b-a995-0cd21e306378">
+                <name>Bern</name>
+            </departureStation>
+            <arrivalStation id="4774daab-5998-4c10-8d38-17fe7754a32a">
+                <name>Zürich</name>
+            </arrivalStation>
+            <availableSeats>140</availableSeats>
+        </train>
+        <train id="5adc0630-0096-46c9-a9d7-f9ca6a49ab25">
+            <departureTime>11-03-2023, 00:40:00</departureTime>
+            <arrivalTime>11-03-2023, 02:10:00</arrivalTime>
+            <departureStation id="64fa53e3-0344-416b-a995-0cd21e306378">
+                <name>Bern</name>
+            </departureStation>
+            <arrivalStation id="4774daab-5998-4c10-8d38-17fe7754a32a">
+                <name>Zürich</name>
+            </arrivalStation>
+            <availableSeats>140</availableSeats>
+        </train>
+        <train id="43c39ea3-fa43-4adc-89ac-d60e157d2fde">
+            <departureTime>11-03-2023, 00:25:00</departureTime>
+            <arrivalTime>11-03-2023, 02:55:00</arrivalTime>
+            <departureStation id="64fa53e3-0344-416b-a995-0cd21e306378">
+                <name>Bern</name>
+            </departureStation>
+            <arrivalStation id="b2f21606-4e95-4c6d-baac-39c4d502c73d">
+                <name>Chur</name>
+            </arrivalStation>
+            <availableSeats>140</availableSeats>
+        </train>
+        <train id="17be042f-3b22-4c1d-8c19-f262101db874">
+            <departureTime>10-03-2023, 12:25:00</departureTime>
+            <arrivalTime>10-03-2023, 14:00:00</arrivalTime>
+            <departureStation id="4774daab-5998-4c10-8d38-17fe7754a32a">
+                <name>Zürich</name>
+            </departureStation>
+            <arrivalStation id="b2f21606-4e95-4c6d-baac-39c4d502c73d">
+                <name>Chur</name>
+            </arrivalStation>
+            <availableSeats>140</availableSeats>
+        </train>
+        <train id="8126a413-01ae-4a54-9702-b05ef98f7076">
+            <departureTime>10-03-2023, 20:25:00</departureTime>
+            <arrivalTime>10-03-2023, 22:00:00</arrivalTime>
+            <departureStation id="4774daab-5998-4c10-8d38-17fe7754a32a">
+                <name>Zürich</name>
+            </departureStation>
+            <arrivalStation id="b2f21606-4e95-4c6d-baac-39c4d502c73d">
+                <name>Chur</name>
+            </arrivalStation>
+            <availableSeats>140</availableSeats>
+        </train>
+        <train id="0ef79312-ece3-461a-83cb-4605a4fd5220">
+            <departureTime>10-03-2023, 19:30:00</departureTime>
+            <arrivalTime>10-03-2023, 20:30:00</arrivalTime>
+            <departureStation id="7af1c55d-c627-434a-b350-419666745bd4">
+                <name>Basel</name>
+            </departureStation>
+            <arrivalStation id="4774daab-5998-4c10-8d38-17fe7754a32a">
+                <name>Zürich</name>
+            </arrivalStation>
+            <availableSeats>140</availableSeats>
+        </train>
+        <train id="c3273867-b1cc-4450-af81-b1b9d9d5c120">
+            <departureTime>10-03-2023, 01:30:00</departureTime>
+            <arrivalTime>10-03-2023, 02:30:00</arrivalTime>
+            <departureStation id="7af1c55d-c627-434a-b350-419666745bd4">
+                <name>Basel</name>
+            </departureStation>
+            <arrivalStation id="4774daab-5998-4c10-8d38-17fe7754a32a">
+                <name>Zürich</name>
+            </arrivalStation>
+            <availableSeats>140</availableSeats>
+        </train>
+        <train id="5465d022-fc25-4658-98b1-6cafc0de47c0">
+            <departureTime>10-03-2023, 16:45:00</departureTime>
+            <arrivalTime>10-03-2023, 18:05:00</arrivalTime>
+            <departureStation id="217d0649-0d25-40bf-a864-094aae065264">
                 <name>Lausane</name>
             </departureStation>
-            <arrivalStation>
-                <id>0c091216-e803-4545-8bfe-9f4b3025750b</id>
+            <arrivalStation id="0c091216-e803-4545-8bfe-9f4b3025750b">
                 <name>Sion</name>
             </arrivalStation>
-        </line>
-        <line>
-            <id>522789aa-aee5-44b6-9db7-ea70f97cb855</id>
-            <name>BER-SIO</name>
-            <duration>100</duration>
-            <departureStation>
-                <id>64fa53e3-0344-416b-a995-0cd21e306378</id>
-                <name>Bern</name>
-            </departureStation>
-            <arrivalStation>
-                <id>0c091216-e803-4545-8bfe-9f4b3025750b</id>
-                <name>Sion</name>
-            </arrivalStation>
-        </line>
-        <line>
-            <id>729a9c62-7d76-4a48-ab44-e2114d3ab867</id>
-            <name>BER-CHU</name>
-            <duration>150</duration>
-            <departureStation>
-                <id>64fa53e3-0344-416b-a995-0cd21e306378</id>
-                <name>Bern</name>
-            </departureStation>
-            <arrivalStation>
-                <id>b2f21606-4e95-4c6d-baac-39c4d502c73d</id>
-                <name>Chur</name>
-            </arrivalStation>
-        </line>
-    </lines>
-    <trains>
-        <train>
-            <id>24e7b3c8-e7af-4296-8a00-1f46213afc68</id>
-            <arrivalTime>10-03-2023, 18:00:00</arrivalTime>
-            <departureTime>10-03-2023, 16:50:00</departureTime>
-            <updateTime>01-01-9999, 12:59:00</updateTime>
-            <vehicle>
-                <id>a09968c1-53cc-4589-8806-55a370136fb9</id>
-                <businessId>AAAA0000</businessId>
-                <description>Decription test</description>
-                <seats>140</seats>
-            </vehicle>
-            <line>
-                <id>c528a4e9-dc1b-4e27-a09c-e63ec8a4ddaf</id>
-                <name>LAU-BER</name>
-                <duration>70</duration>
-                <departureStation>
-                    <id>217d0649-0d25-40bf-a864-094aae065264</id>
-                    <name>Lausane</name>
-                </departureStation>
-                <arrivalStation>
-                    <id>64fa53e3-0344-416b-a995-0cd21e306378</id>
-                    <name>Bern</name>
-                </arrivalStation>
-            </line>
-        </train>
-        <train>
-            <id>2e9a5359-80e2-43fe-8395-56822aad8778</id>
-            <arrivalTime>10-03-2023, 08:35:00</arrivalTime>
-            <departureTime>10-03-2023, 08:00:00</departureTime>
-            <updateTime>01-01-9999, 12:59:00</updateTime>
-            <vehicle>
-                <id>a09968c1-53cc-4589-8806-55a370136fb9</id>
-                <businessId>AAAA0000</businessId>
-                <description>Decription test</description>
-                <seats>140</seats>
-            </vehicle>
-            <line>
-                <id>6352ed06-9bbc-4e1b-a2c4-b20ef8d38f15</id>
-                <name>GEN-LAU</name>
-                <duration>35</duration>
-                <departureStation>
-                    <id>ddbd9179-3d5d-4079-9fab-806ef268e0cb</id>
-                    <name>Geneva</name>
-                </departureStation>
-                <arrivalStation>
-                    <id>217d0649-0d25-40bf-a864-094aae065264</id>
-                    <name>Lausane</name>
-                </arrivalStation>
-            </line>
-        </train>
-        <train>
-            <id>8d9a7dfe-656c-4aa4-8cef-33b7df4e962b</id>
-            <arrivalTime>10-03-2023, 16:35:00</arrivalTime>
-            <departureTime>10-03-2023, 16:00:00</departureTime>
-            <updateTime>01-01-9999, 12:59:00</updateTime>
-            <vehicle>
-                <id>a09968c1-53cc-4589-8806-55a370136fb9</id>
-                <businessId>AAAA0000</businessId>
-                <description>Decription test</description>
-                <seats>140</seats>
-            </vehicle>
-            <line>
-                <id>6352ed06-9bbc-4e1b-a2c4-b20ef8d38f15</id>
-                <name>GEN-LAU</name>
-                <duration>35</duration>
-                <departureStation>
-                    <id>ddbd9179-3d5d-4079-9fab-806ef268e0cb</id>
-                    <name>Geneva</name>
-                </departureStation>
-                <arrivalStation>
-                    <id>217d0649-0d25-40bf-a864-094aae065264</id>
-                    <name>Lausane</name>
-                </arrivalStation>
-            </line>
-        </train>
-        <train>
-            <id>56b7b426-7881-4e49-bcc4-7c58fbf2f61e</id>
-            <arrivalTime>10-03-2023, 22:35:00</arrivalTime>
-            <departureTime>10-03-2023, 22:00:00</departureTime>
-            <updateTime>01-01-9999, 12:59:00</updateTime>
-            <vehicle>
-                <id>a09968c1-53cc-4589-8806-55a370136fb9</id>
-                <businessId>AAAA0000</businessId>
-                <description>Decription test</description>
-                <seats>140</seats>
-            </vehicle>
-            <line>
-                <id>6352ed06-9bbc-4e1b-a2c4-b20ef8d38f15</id>
-                <name>GEN-LAU</name>
-                <duration>35</duration>
-                <departureStation>
-                    <id>ddbd9179-3d5d-4079-9fab-806ef268e0cb</id>
-                    <name>Geneva</name>
-                </departureStation>
-                <arrivalStation>
-                    <id>217d0649-0d25-40bf-a864-094aae065264</id>
-                    <name>Lausane</name>
-                </arrivalStation>
-            </line>
-        </train>
-        <train>
-            <id>b8be2caf-7a04-44f5-ab16-5dbc5d2afc86</id>
-            <arrivalTime>10-03-2023, 10:05:00</arrivalTime>
-            <departureTime>10-03-2023, 08:45:00</departureTime>
-            <updateTime>01-01-9999, 12:59:00</updateTime>
-            <vehicle>
-                <id>a09968c1-53cc-4589-8806-55a370136fb9</id>
-                <businessId>AAAA0000</businessId>
-                <description>Decription test</description>
-                <seats>140</seats>
-            </vehicle>
-            <line>
-                <id>5d228204-77a9-43ba-bdfb-a6f9bbb60493</id>
-                <name>LAU-SIO</name>
-                <duration>80</duration>
-                <departureStation>
-                    <id>217d0649-0d25-40bf-a864-094aae065264</id>
-                    <name>Lausane</name>
-                </departureStation>
-                <arrivalStation>
-                    <id>0c091216-e803-4545-8bfe-9f4b3025750b</id>
-                    <name>Sion</name>
-                </arrivalStation>
-            </line>
-        </train>
-        <train>
-            <id>d1fb0da6-0d50-4e15-80da-e3bc0fb0808e</id>
-            <arrivalTime>11-03-2023, 00:00:00</arrivalTime>
-            <departureTime>10-03-2023, 22:50:00</departureTime>
-            <updateTime>01-01-9999, 12:59:00</updateTime>
-            <vehicle>
-                <id>a09968c1-53cc-4589-8806-55a370136fb9</id>
-                <businessId>AAAA0000</businessId>
-                <description>Decription test</description>
-                <seats>140</seats>
-            </vehicle>
-            <line>
-                <id>c528a4e9-dc1b-4e27-a09c-e63ec8a4ddaf</id>
-                <name>LAU-BER</name>
-                <duration>70</duration>
-                <departureStation>
-                    <id>217d0649-0d25-40bf-a864-094aae065264</id>
-                    <name>Lausane</name>
-                </departureStation>
-                <arrivalStation>
-                    <id>64fa53e3-0344-416b-a995-0cd21e306378</id>
-                    <name>Bern</name>
-                </arrivalStation>
-            </line>
-        </train>
-        <train>
-            <id>877a9767-3802-40c7-8be0-a9067342e62b</id>
-            <arrivalTime>10-03-2023, 10:55:00</arrivalTime>
-            <departureTime>10-03-2023, 08:55:00</departureTime>
-            <updateTime>01-01-9999, 12:59:00</updateTime>
-            <vehicle>
-                <id>a09968c1-53cc-4589-8806-55a370136fb9</id>
-                <businessId>AAAA0000</businessId>
-                <description>Decription test</description>
-                <seats>140</seats>
-            </vehicle>
-            <line>
-                <id>35ed8420-7674-42f8-ac40-30172455fe46</id>
-                <name>LAU-BAS</name>
-                <duration>120</duration>
-                <departureStation>
-                    <id>217d0649-0d25-40bf-a864-094aae065264</id>
-                    <name>Lausane</name>
-                </departureStation>
-                <arrivalStation>
-                    <id>7af1c55d-c627-434a-b350-419666745bd4</id>
-                    <name>Basel</name>
-                </arrivalStation>
-            </line>
-        </train>
-        <train>
-            <id>51bfe9f0-df45-4e82-b564-a7c015d3b7d6</id>
-            <arrivalTime>11-03-2023, 02:10:00</arrivalTime>
-            <departureTime>11-03-2023, 00:30:00</departureTime>
-            <updateTime>01-01-9999, 12:59:00</updateTime>
-            <vehicle>
-                <id>a09968c1-53cc-4589-8806-55a370136fb9</id>
-                <businessId>AAAA0000</businessId>
-                <description>Decription test</description>
-                <seats>140</seats>
-            </vehicle>
-            <line>
-                <id>dbb30547-91d6-40a6-9e86-480a09e3ad31</id>
-                <name>SIO-BER</name>
-                <duration>100</duration>
-                <departureStation>
-                    <id>0c091216-e803-4545-8bfe-9f4b3025750b</id>
-                    <name>Sion</name>
-                </departureStation>
-                <arrivalStation>
-                    <id>64fa53e3-0344-416b-a995-0cd21e306378</id>
-                    <name>Bern</name>
-                </arrivalStation>
-            </line>
-        </train>
-        <train>
-            <id>40a17030-8082-46fc-905c-088beb213f1b</id>
-            <arrivalTime>10-03-2023, 10:00:00</arrivalTime>
-            <departureTime>10-03-2023, 08:50:00</departureTime>
-            <updateTime>01-01-9999, 12:59:00</updateTime>
-            <vehicle>
-                <id>a09968c1-53cc-4589-8806-55a370136fb9</id>
-                <businessId>AAAA0000</businessId>
-                <description>Decription test</description>
-                <seats>140</seats>
-            </vehicle>
-            <line>
-                <id>c528a4e9-dc1b-4e27-a09c-e63ec8a4ddaf</id>
-                <name>LAU-BER</name>
-                <duration>70</duration>
-                <departureStation>
-                    <id>217d0649-0d25-40bf-a864-094aae065264</id>
-                    <name>Lausane</name>
-                </departureStation>
-                <arrivalStation>
-                    <id>64fa53e3-0344-416b-a995-0cd21e306378</id>
-                    <name>Bern</name>
-                </arrivalStation>
-            </line>
-        </train>
-        <train>
-            <id>c3b8a77f-b8d0-4abd-b176-d24940a1534f</id>
-            <arrivalTime>10-03-2023, 18:55:00</arrivalTime>
-            <departureTime>10-03-2023, 16:55:00</departureTime>
-            <updateTime>01-01-9999, 12:59:00</updateTime>
-            <vehicle>
-                <id>a09968c1-53cc-4589-8806-55a370136fb9</id>
-                <businessId>AAAA0000</businessId>
-                <description>Decription test</description>
-                <seats>140</seats>
-            </vehicle>
-            <line>
-                <id>35ed8420-7674-42f8-ac40-30172455fe46</id>
-                <name>LAU-BAS</name>
-                <duration>120</duration>
-                <departureStation>
-                    <id>217d0649-0d25-40bf-a864-094aae065264</id>
-                    <name>Lausane</name>
-                </departureStation>
-                <arrivalStation>
-                    <id>7af1c55d-c627-434a-b350-419666745bd4</id>
-                    <name>Basel</name>
-                </arrivalStation>
-            </line>
-        </train>
-        <train>
-            <id>6985ef46-db90-4acc-92c7-63f40e3273eb</id>
-            <arrivalTime>11-03-2023, 00:55:00</arrivalTime>
-            <departureTime>10-03-2023, 22:55:00</departureTime>
-            <updateTime>01-01-9999, 12:59:00</updateTime>
-            <vehicle>
-                <id>a09968c1-53cc-4589-8806-55a370136fb9</id>
-                <businessId>AAAA0000</businessId>
-                <description>Decription test</description>
-                <seats>140</seats>
-            </vehicle>
-            <line>
-                <id>35ed8420-7674-42f8-ac40-30172455fe46</id>
-                <name>LAU-BAS</name>
-                <duration>120</duration>
-                <departureStation>
-                    <id>217d0649-0d25-40bf-a864-094aae065264</id>
-                    <name>Lausane</name>
-                </departureStation>
-                <arrivalStation>
-                    <id>7af1c55d-c627-434a-b350-419666745bd4</id>
-                    <name>Basel</name>
-                </arrivalStation>
-            </line>
-        </train>
-        <train>
-            <id>a7d2afbc-5a1a-4b70-9ebe-35a948029090</id>
-            <arrivalTime>10-03-2023, 12:55:00</arrivalTime>
-            <departureTime>10-03-2023, 10:25:00</departureTime>
-            <updateTime>01-01-9999, 12:59:00</updateTime>
-            <vehicle>
-                <id>a09968c1-53cc-4589-8806-55a370136fb9</id>
-                <businessId>AAAA0000</businessId>
-                <description>Decription test</description>
-                <seats>140</seats>
-            </vehicle>
-            <line>
-                <id>729a9c62-7d76-4a48-ab44-e2114d3ab867</id>
-                <name>BER-CHU</name>
-                <duration>150</duration>
-                <departureStation>
-                    <id>64fa53e3-0344-416b-a995-0cd21e306378</id>
-                    <name>Bern</name>
-                </departureStation>
-                <arrivalStation>
-                    <id>b2f21606-4e95-4c6d-baac-39c4d502c73d</id>
-                    <name>Chur</name>
-                </arrivalStation>
-            </line>
-        </train>
-        <train>
-            <id>442d1638-4096-4ebb-a393-1b95af10c974</id>
-            <arrivalTime>11-03-2023, 00:05:00</arrivalTime>
-            <departureTime>10-03-2023, 22:45:00</departureTime>
-            <updateTime>01-01-9999, 12:59:00</updateTime>
-            <vehicle>
-                <id>a09968c1-53cc-4589-8806-55a370136fb9</id>
-                <businessId>AAAA0000</businessId>
-                <description>Decription test</description>
-                <seats>140</seats>
-            </vehicle>
-            <line>
-                <id>5d228204-77a9-43ba-bdfb-a6f9bbb60493</id>
-                <name>LAU-SIO</name>
-                <duration>80</duration>
-                <departureStation>
-                    <id>217d0649-0d25-40bf-a864-094aae065264</id>
-                    <name>Lausane</name>
-                </departureStation>
-                <arrivalStation>
-                    <id>0c091216-e803-4545-8bfe-9f4b3025750b</id>
-                    <name>Sion</name>
-                </arrivalStation>
-            </line>
-        </train>
-        <train>
-            <id>b5169947-308b-4f11-bc81-c2010a0dc185</id>
-            <arrivalTime>10-03-2023, 14:20:00</arrivalTime>
-            <departureTime>10-03-2023, 11:40:00</departureTime>
-            <updateTime>01-01-9999, 12:59:00</updateTime>
-            <vehicle>
-                <id>a09968c1-53cc-4589-8806-55a370136fb9</id>
-                <businessId>AAAA0000</businessId>
-                <description>Decription test</description>
-                <seats>140</seats>
-            </vehicle>
-            <line>
-                <id>ca7580c8-f302-4e89-a23a-d35075b5f103</id>
-                <name>CHU-LUG</name>
-                <duration>160</duration>
-                <departureStation>
-                    <id>b2f21606-4e95-4c6d-baac-39c4d502c73d</id>
-                    <name>Chur</name>
-                </departureStation>
-                <arrivalStation>
-                    <id>02c605dc-b0ef-4c2a-a19f-e25f087e6d36</id>
-                    <name>Lugano</name>
-                </arrivalStation>
-            </line>
-        </train>
-        <train>
-            <id>0702e6a9-dc16-44b0-972e-4f5fee48abdf</id>
-            <arrivalTime>10-03-2023, 22:20:00</arrivalTime>
-            <departureTime>10-03-2023, 19:40:00</departureTime>
-            <updateTime>01-01-9999, 12:59:00</updateTime>
-            <vehicle>
-                <id>a09968c1-53cc-4589-8806-55a370136fb9</id>
-                <businessId>AAAA0000</businessId>
-                <description>Decription test</description>
-                <seats>140</seats>
-            </vehicle>
-            <line>
-                <id>ca7580c8-f302-4e89-a23a-d35075b5f103</id>
-                <name>CHU-LUG</name>
-                <duration>160</duration>
-                <departureStation>
-                    <id>b2f21606-4e95-4c6d-baac-39c4d502c73d</id>
-                    <name>Chur</name>
-                </departureStation>
-                <arrivalStation>
-                    <id>02c605dc-b0ef-4c2a-a19f-e25f087e6d36</id>
-                    <name>Lugano</name>
-                </arrivalStation>
-            </line>
-        </train>
-        <train>
-            <id>b89673a0-147f-4c52-8788-10a8898e7017</id>
-            <arrivalTime>11-03-2023, 04:20:00</arrivalTime>
-            <departureTime>11-03-2023, 01:40:00</departureTime>
-            <updateTime>01-01-9999, 12:59:00</updateTime>
-            <vehicle>
-                <id>a09968c1-53cc-4589-8806-55a370136fb9</id>
-                <businessId>AAAA0000</businessId>
-                <description>Decription test</description>
-                <seats>140</seats>
-            </vehicle>
-            <line>
-                <id>ca7580c8-f302-4e89-a23a-d35075b5f103</id>
-                <name>CHU-LUG</name>
-                <duration>160</duration>
-                <departureStation>
-                    <id>b2f21606-4e95-4c6d-baac-39c4d502c73d</id>
-                    <name>Chur</name>
-                </departureStation>
-                <arrivalStation>
-                    <id>02c605dc-b0ef-4c2a-a19f-e25f087e6d36</id>
-                    <name>Lugano</name>
-                </arrivalStation>
-            </line>
-        </train>
-        <train>
-            <id>655ffa4b-281d-41c2-8561-46f6ce454d77</id>
-            <arrivalTime>10-03-2023, 11:35:00</arrivalTime>
-            <departureTime>10-03-2023, 10:35:00</departureTime>
-            <updateTime>01-01-9999, 12:59:00</updateTime>
-            <vehicle>
-                <id>a09968c1-53cc-4589-8806-55a370136fb9</id>
-                <businessId>AAAA0000</businessId>
-                <description>Decription test</description>
-                <seats>140</seats>
-            </vehicle>
-            <line>
-                <id>c46f4c7e-3f49-4fec-b736-f5ff80369a87</id>
-                <name>BER-BAS</name>
-                <duration>60</duration>
-                <departureStation>
-                    <id>64fa53e3-0344-416b-a995-0cd21e306378</id>
-                    <name>Bern</name>
-                </departureStation>
-                <arrivalStation>
-                    <id>7af1c55d-c627-434a-b350-419666745bd4</id>
-                    <name>Basel</name>
-                </arrivalStation>
-            </line>
-        </train>
-        <train>
-            <id>588bc2f7-cf1d-4631-8888-2cdbe9b9d0e3</id>
-            <arrivalTime>10-03-2023, 19:35:00</arrivalTime>
-            <departureTime>10-03-2023, 18:35:00</departureTime>
-            <updateTime>01-01-9999, 12:59:00</updateTime>
-            <vehicle>
-                <id>a09968c1-53cc-4589-8806-55a370136fb9</id>
-                <businessId>AAAA0000</businessId>
-                <description>Decription test</description>
-                <seats>140</seats>
-            </vehicle>
-            <line>
-                <id>c46f4c7e-3f49-4fec-b736-f5ff80369a87</id>
-                <name>BER-BAS</name>
-                <duration>60</duration>
-                <departureStation>
-                    <id>64fa53e3-0344-416b-a995-0cd21e306378</id>
-                    <name>Bern</name>
-                </departureStation>
-                <arrivalStation>
-                    <id>7af1c55d-c627-434a-b350-419666745bd4</id>
-                    <name>Basel</name>
-                </arrivalStation>
-            </line>
-        </train>
-        <train>
-            <id>629bc7d6-0ab1-4b43-a0ee-a0a96d00c3a6</id>
-            <arrivalTime>10-03-2023, 20:10:00</arrivalTime>
-            <departureTime>10-03-2023, 18:30:00</departureTime>
-            <updateTime>01-01-9999, 12:59:00</updateTime>
-            <vehicle>
-                <id>a09968c1-53cc-4589-8806-55a370136fb9</id>
-                <businessId>AAAA0000</businessId>
-                <description>Decription test</description>
-                <seats>140</seats>
-            </vehicle>
-            <line>
-                <id>dbb30547-91d6-40a6-9e86-480a09e3ad31</id>
-                <name>SIO-BER</name>
-                <duration>100</duration>
-                <departureStation>
-                    <id>0c091216-e803-4545-8bfe-9f4b3025750b</id>
-                    <name>Sion</name>
-                </departureStation>
-                <arrivalStation>
-                    <id>64fa53e3-0344-416b-a995-0cd21e306378</id>
-                    <name>Bern</name>
-                </arrivalStation>
-            </line>
-        </train>
-        <train>
-            <id>1b3d18af-7f6c-471b-9c1a-1a6c0d94bee5</id>
-            <arrivalTime>10-03-2023, 20:55:00</arrivalTime>
-            <departureTime>10-03-2023, 18:25:00</departureTime>
-            <updateTime>01-01-9999, 12:59:00</updateTime>
-            <vehicle>
-                <id>a09968c1-53cc-4589-8806-55a370136fb9</id>
-                <businessId>AAAA0000</businessId>
-                <description>Decription test</description>
-                <seats>140</seats>
-            </vehicle>
-            <line>
-                <id>729a9c62-7d76-4a48-ab44-e2114d3ab867</id>
-                <name>BER-CHU</name>
-                <duration>150</duration>
-                <departureStation>
-                    <id>64fa53e3-0344-416b-a995-0cd21e306378</id>
-                    <name>Bern</name>
-                </departureStation>
-                <arrivalStation>
-                    <id>b2f21606-4e95-4c6d-baac-39c4d502c73d</id>
-                    <name>Chur</name>
-                </arrivalStation>
-            </line>
-        </train>
-        <train>
-            <id>2fbf38d8-72fb-4300-a34b-97cf3c7d93e6</id>
-            <arrivalTime>11-03-2023, 04:00:00</arrivalTime>
-            <departureTime>11-03-2023, 02:25:00</departureTime>
-            <updateTime>01-01-9999, 12:59:00</updateTime>
-            <vehicle>
-                <id>a09968c1-53cc-4589-8806-55a370136fb9</id>
-                <businessId>AAAA0000</businessId>
-                <description>Decription test</description>
-                <seats>140</seats>
-            </vehicle>
-            <line>
-                <id>149906f7-7dfc-4520-8663-8aa76a6da4f9</id>
-                <name>ZUR-CHU</name>
-                <duration>95</duration>
-                <departureStation>
-                    <id>4774daab-5998-4c10-8d38-17fe7754a32a</id>
-                    <name>Zürich</name>
-                </departureStation>
-                <arrivalStation>
-                    <id>b2f21606-4e95-4c6d-baac-39c4d502c73d</id>
-                    <name>Chur</name>
-                </arrivalStation>
-            </line>
-        </train>
-        <train>
-            <id>2271fd9f-7f77-41d9-9634-ec685fe58ce3</id>
-            <arrivalTime>10-03-2023, 12:30:00</arrivalTime>
-            <departureTime>10-03-2023, 11:30:00</departureTime>
-            <updateTime>01-01-9999, 12:59:00</updateTime>
-            <vehicle>
-                <id>a09968c1-53cc-4589-8806-55a370136fb9</id>
-                <businessId>AAAA0000</businessId>
-                <description>Decription test</description>
-                <seats>140</seats>
-            </vehicle>
-            <line>
-                <id>10e294d0-9604-4aa9-bd0e-626c44160e66</id>
-                <name>BAS-ZUR</name>
-                <duration>60</duration>
-                <departureStation>
-                    <id>7af1c55d-c627-434a-b350-419666745bd4</id>
-                    <name>Basel</name>
-                </departureStation>
-                <arrivalStation>
-                    <id>4774daab-5998-4c10-8d38-17fe7754a32a</id>
-                    <name>Zürich</name>
-                </arrivalStation>
-            </line>
-        </train>
-        <train>
-            <id>7b085934-8ff7-4c0d-ba13-fcd30369b065</id>
-            <arrivalTime>11-03-2023, 01:35:00</arrivalTime>
-            <departureTime>11-03-2023, 00:35:00</departureTime>
-            <updateTime>01-01-9999, 12:59:00</updateTime>
-            <vehicle>
-                <id>a09968c1-53cc-4589-8806-55a370136fb9</id>
-                <businessId>AAAA0000</businessId>
-                <description>Decription test</description>
-                <seats>140</seats>
-            </vehicle>
-            <line>
-                <id>c46f4c7e-3f49-4fec-b736-f5ff80369a87</id>
-                <name>BER-BAS</name>
-                <duration>60</duration>
-                <departureStation>
-                    <id>64fa53e3-0344-416b-a995-0cd21e306378</id>
-                    <name>Bern</name>
-                </departureStation>
-                <arrivalStation>
-                    <id>7af1c55d-c627-434a-b350-419666745bd4</id>
-                    <name>Basel</name>
-                </arrivalStation>
-            </line>
-        </train>
-        <train>
-            <id>3809197f-1175-412d-a0e5-45b40838af98</id>
-            <arrivalTime>10-03-2023, 12:10:00</arrivalTime>
-            <departureTime>10-03-2023, 10:30:00</departureTime>
-            <updateTime>01-01-9999, 12:59:00</updateTime>
-            <vehicle>
-                <id>a09968c1-53cc-4589-8806-55a370136fb9</id>
-                <businessId>AAAA0000</businessId>
-                <description>Decription test</description>
-                <seats>140</seats>
-            </vehicle>
-            <line>
-                <id>dbb30547-91d6-40a6-9e86-480a09e3ad31</id>
-                <name>SIO-BER</name>
-                <duration>100</duration>
-                <departureStation>
-                    <id>0c091216-e803-4545-8bfe-9f4b3025750b</id>
-                    <name>Sion</name>
-                </departureStation>
-                <arrivalStation>
-                    <id>64fa53e3-0344-416b-a995-0cd21e306378</id>
-                    <name>Bern</name>
-                </arrivalStation>
-            </line>
-        </train>
-        <train>
-            <id>f5870048-b273-4d91-b107-ba607ee98a3b</id>
-            <arrivalTime>10-03-2023, 12:10:00</arrivalTime>
-            <departureTime>10-03-2023, 10:40:00</departureTime>
-            <updateTime>01-01-9999, 12:59:00</updateTime>
-            <vehicle>
-                <id>a09968c1-53cc-4589-8806-55a370136fb9</id>
-                <businessId>AAAA0000</businessId>
-                <description>Decription test</description>
-                <seats>140</seats>
-            </vehicle>
-            <line>
-                <id>324f76f2-4ab1-42d3-9340-4f62ec4b3da2</id>
-                <name>BER-ZUR</name>
-                <duration>90</duration>
-                <departureStation>
-                    <id>64fa53e3-0344-416b-a995-0cd21e306378</id>
-                    <name>Bern</name>
-                </departureStation>
-                <arrivalStation>
-                    <id>4774daab-5998-4c10-8d38-17fe7754a32a</id>
-                    <name>Zürich</name>
-                </arrivalStation>
-            </line>
-        </train>
-        <train>
-            <id>e7860e8d-b284-4ed7-a406-b15684827e1f</id>
-            <arrivalTime>10-03-2023, 20:10:00</arrivalTime>
-            <departureTime>10-03-2023, 18:40:00</departureTime>
-            <updateTime>01-01-9999, 12:59:00</updateTime>
-            <vehicle>
-                <id>a09968c1-53cc-4589-8806-55a370136fb9</id>
-                <businessId>AAAA0000</businessId>
-                <description>Decription test</description>
-                <seats>140</seats>
-            </vehicle>
-            <line>
-                <id>324f76f2-4ab1-42d3-9340-4f62ec4b3da2</id>
-                <name>BER-ZUR</name>
-                <duration>90</duration>
-                <departureStation>
-                    <id>64fa53e3-0344-416b-a995-0cd21e306378</id>
-                    <name>Bern</name>
-                </departureStation>
-                <arrivalStation>
-                    <id>4774daab-5998-4c10-8d38-17fe7754a32a</id>
-                    <name>Zürich</name>
-                </arrivalStation>
-            </line>
-        </train>
-        <train>
-            <id>5adc0630-0096-46c9-a9d7-f9ca6a49ab25</id>
-            <arrivalTime>11-03-2023, 02:10:00</arrivalTime>
-            <departureTime>11-03-2023, 00:40:00</departureTime>
-            <updateTime>01-01-9999, 12:59:00</updateTime>
-            <vehicle>
-                <id>a09968c1-53cc-4589-8806-55a370136fb9</id>
-                <businessId>AAAA0000</businessId>
-                <description>Decription test</description>
-                <seats>140</seats>
-            </vehicle>
-            <line>
-                <id>324f76f2-4ab1-42d3-9340-4f62ec4b3da2</id>
-                <name>BER-ZUR</name>
-                <duration>90</duration>
-                <departureStation>
-                    <id>64fa53e3-0344-416b-a995-0cd21e306378</id>
-                    <name>Bern</name>
-                </departureStation>
-                <arrivalStation>
-                    <id>4774daab-5998-4c10-8d38-17fe7754a32a</id>
-                    <name>Zürich</name>
-                </arrivalStation>
-            </line>
-        </train>
-        <train>
-            <id>43c39ea3-fa43-4adc-89ac-d60e157d2fde</id>
-            <arrivalTime>11-03-2023, 02:55:00</arrivalTime>
-            <departureTime>11-03-2023, 00:25:00</departureTime>
-            <updateTime>01-01-9999, 12:59:00</updateTime>
-            <vehicle>
-                <id>a09968c1-53cc-4589-8806-55a370136fb9</id>
-                <businessId>AAAA0000</businessId>
-                <description>Decription test</description>
-                <seats>140</seats>
-            </vehicle>
-            <line>
-                <id>729a9c62-7d76-4a48-ab44-e2114d3ab867</id>
-                <name>BER-CHU</name>
-                <duration>150</duration>
-                <departureStation>
-                    <id>64fa53e3-0344-416b-a995-0cd21e306378</id>
-                    <name>Bern</name>
-                </departureStation>
-                <arrivalStation>
-                    <id>b2f21606-4e95-4c6d-baac-39c4d502c73d</id>
-                    <name>Chur</name>
-                </arrivalStation>
-            </line>
-        </train>
-        <train>
-            <id>17be042f-3b22-4c1d-8c19-f262101db874</id>
-            <arrivalTime>10-03-2023, 14:00:00</arrivalTime>
-            <departureTime>10-03-2023, 12:25:00</departureTime>
-            <updateTime>01-01-9999, 12:59:00</updateTime>
-            <vehicle>
-                <id>a09968c1-53cc-4589-8806-55a370136fb9</id>
-                <businessId>AAAA0000</businessId>
-                <description>Decription test</description>
-                <seats>140</seats>
-            </vehicle>
-            <line>
-                <id>149906f7-7dfc-4520-8663-8aa76a6da4f9</id>
-                <name>ZUR-CHU</name>
-                <duration>95</duration>
-                <departureStation>
-                    <id>4774daab-5998-4c10-8d38-17fe7754a32a</id>
-                    <name>Zürich</name>
-                </departureStation>
-                <arrivalStation>
-                    <id>b2f21606-4e95-4c6d-baac-39c4d502c73d</id>
-                    <name>Chur</name>
-                </arrivalStation>
-            </line>
-        </train>
-        <train>
-            <id>8126a413-01ae-4a54-9702-b05ef98f7076</id>
-            <arrivalTime>10-03-2023, 22:00:00</arrivalTime>
-            <departureTime>10-03-2023, 20:25:00</departureTime>
-            <updateTime>01-01-9999, 12:59:00</updateTime>
-            <vehicle>
-                <id>a09968c1-53cc-4589-8806-55a370136fb9</id>
-                <businessId>AAAA0000</businessId>
-                <description>Decription test</description>
-                <seats>140</seats>
-            </vehicle>
-            <line>
-                <id>149906f7-7dfc-4520-8663-8aa76a6da4f9</id>
-                <name>ZUR-CHU</name>
-                <duration>95</duration>
-                <departureStation>
-                    <id>4774daab-5998-4c10-8d38-17fe7754a32a</id>
-                    <name>Zürich</name>
-                </departureStation>
-                <arrivalStation>
-                    <id>b2f21606-4e95-4c6d-baac-39c4d502c73d</id>
-                    <name>Chur</name>
-                </arrivalStation>
-            </line>
-        </train>
-        <train>
-            <id>0ef79312-ece3-461a-83cb-4605a4fd5220</id>
-            <arrivalTime>10-03-2023, 20:30:00</arrivalTime>
-            <departureTime>10-03-2023, 19:30:00</departureTime>
-            <updateTime>01-01-9999, 12:59:00</updateTime>
-            <vehicle>
-                <id>a09968c1-53cc-4589-8806-55a370136fb9</id>
-                <businessId>AAAA0000</businessId>
-                <description>Decription test</description>
-                <seats>140</seats>
-            </vehicle>
-            <line>
-                <id>10e294d0-9604-4aa9-bd0e-626c44160e66</id>
-                <name>BAS-ZUR</name>
-                <duration>60</duration>
-                <departureStation>
-                    <id>7af1c55d-c627-434a-b350-419666745bd4</id>
-                    <name>Basel</name>
-                </departureStation>
-                <arrivalStation>
-                    <id>4774daab-5998-4c10-8d38-17fe7754a32a</id>
-                    <name>Zürich</name>
-                </arrivalStation>
-            </line>
-        </train>
-        <train>
-            <id>c3273867-b1cc-4450-af81-b1b9d9d5c120</id>
-            <arrivalTime>10-03-2023, 02:30:00</arrivalTime>
-            <departureTime>10-03-2023, 01:30:00</departureTime>
-            <updateTime>01-01-9999, 12:59:00</updateTime>
-            <vehicle>
-                <id>a09968c1-53cc-4589-8806-55a370136fb9</id>
-                <businessId>AAAA0000</businessId>
-                <description>Decription test</description>
-                <seats>140</seats>
-            </vehicle>
-            <line>
-                <id>10e294d0-9604-4aa9-bd0e-626c44160e66</id>
-                <name>BAS-ZUR</name>
-                <duration>60</duration>
-                <departureStation>
-                    <id>7af1c55d-c627-434a-b350-419666745bd4</id>
-                    <name>Basel</name>
-                </departureStation>
-                <arrivalStation>
-                    <id>4774daab-5998-4c10-8d38-17fe7754a32a</id>
-                    <name>Zürich</name>
-                </arrivalStation>
-            </line>
-        </train>
-        <train>
-            <id>5465d022-fc25-4658-98b1-6cafc0de47c0</id>
-            <arrivalTime>10-03-2023, 18:05:00</arrivalTime>
-            <departureTime>10-03-2023, 16:45:00</departureTime>
-            <updateTime>01-01-9999, 12:59:00</updateTime>
-            <vehicle>
-                <id>a09968c1-53cc-4589-8806-55a370136fb9</id>
-                <businessId>AAAA0000</businessId>
-                <description>Decription test</description>
-                <seats>140</seats>
-            </vehicle>
-            <line>
-                <id>5d228204-77a9-43ba-bdfb-a6f9bbb60493</id>
-                <name>LAU-SIO</name>
-                <duration>80</duration>
-                <departureStation>
-                    <id>217d0649-0d25-40bf-a864-094aae065264</id>
-                    <name>Lausane</name>
-                </departureStation>
-                <arrivalStation>
-                    <id>0c091216-e803-4545-8bfe-9f4b3025750b</id>
-                    <name>Sion</name>
-                </arrivalStation>
-            </line>
+            <availableSeats>140</availableSeats>
         </train>
     </trains>
-    <vehicles>
-        <vehicle>
-            <id>a09968c1-53cc-4589-8806-55a370136fb9</id>
-            <businessId>AAAA0000</businessId>
-            <description>Decription test</description>
-            <seats>140</seats>
-        </vehicle>
-        <vehicle>
-            <id>9833545b-dbeb-4d50-88cf-575df40529a9</id>
-            <businessId>CCCC0000</businessId>
-            <description>Decription test.</description>
-            <seats>100</seats>
-            <updateTime>2023-02-23 16:15:35</updateTime>
-        </vehicle>
-    </vehicles>
     <stations>
-        <station>
-            <id>ddbd9179-3d5d-4079-9fab-806ef268e0cb</id>
+        <station id="ddbd9179-3d5d-4079-9fab-806ef268e0cb">
             <name>Geneva</name>
         </station>
-        <station>
-            <id>217d0649-0d25-40bf-a864-094aae065264</id>
+        <station id="217d0649-0d25-40bf-a864-094aae065264">
             <name>Lausane</name>
         </station>
-        <station>
-            <id>0c091216-e803-4545-8bfe-9f4b3025750b</id>
+        <station id="a15621e5-c2aa-45e2-9b03-e7d835c3a7a5">
+            <name>Tsichina</name>
+        </station>
+        <station id="0c091216-e803-4545-8bfe-9f4b3025750b">
             <name>Sion</name>
         </station>
-        <station>
-            <id>64fa53e3-0344-416b-a995-0cd21e306378</id>
+        <station id="b1a84dd8-74a0-40e1-8ade-16dd9d33e330">
+            <name>Hola</name>
+        </station>
+        <station id="64fa53e3-0344-416b-a995-0cd21e306378">
             <name>Bern</name>
         </station>
-        <station>
-            <id>7af1c55d-c627-434a-b350-419666745bd4</id>
+        <station id="7af1c55d-c627-434a-b350-419666745bd4">
             <name>Basel</name>
         </station>
-        <station>
-            <id>4774daab-5998-4c10-8d38-17fe7754a32a</id>
+        <station id="4774daab-5998-4c10-8d38-17fe7754a32a">
             <name>Zürich</name>
         </station>
-        <station>
-            <id>b2f21606-4e95-4c6d-baac-39c4d502c73d</id>
+        <station id="b2f21606-4e95-4c6d-baac-39c4d502c73d">
             <name>Chur</name>
         </station>
-        <station>
-            <id>02c605dc-b0ef-4c2a-a19f-e25f087e6d36</id>
+        <station id="02c605dc-b0ef-4c2a-a19f-e25f087e6d36">
             <name>Lugano</name>
         </station>
     </stations>
+    <lines/>
 </data>

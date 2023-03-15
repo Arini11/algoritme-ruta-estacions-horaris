@@ -1,6 +1,8 @@
 package org.example.model;
 
 import lombok.*;
+import org.example.model.xml.Station;
+import org.example.model.xml.Train;
 
 import java.util.Objects;
 
@@ -11,8 +13,8 @@ import java.util.Objects;
 @EqualsAndHashCode
 @ToString
 public class Adjacent {
-    private String id;
-    @EqualsAndHashCode.Exclude
-    private int duration;
+    private Station estacio;
+    private Train train;
+    private int cost;
 
 }

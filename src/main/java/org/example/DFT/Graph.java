@@ -62,17 +62,17 @@ public class Graph {
 //        System.out.println("Looking for all adjacent nodes");
         for (Adjacent adj : adjList.get(u)) {
 //            System.out.println("Iterating over adjacent node "+adj.getId()+" of node "+u);
-            if (!visitedList.contains(adj.getId())) {
+            if (!visitedList.contains(adj.getEstacio().getId())) {
                 // store current node
                 // in path[]
 //                System.out.println("Adding node "+adj.getId()+" to localPath");
-                localPathList.add(adj.getId());
-                calculateAllPathsUtil(adj.getId(), d, visitedList, localPathList);
+                localPathList.add(adj.getEstacio().getId());
+                calculateAllPathsUtil(adj.getEstacio().getId(), d, visitedList, localPathList);
 
                 // remove current node
                 // in path[]
 //                System.out.println("Removing node "+adj.getId()+" from localPath");
-                localPathList.remove(adj.getId());
+                localPathList.remove(adj.getEstacio().getId());
             } else {
 //                System.out.println("Ignoring this one because it's already visited");
             }

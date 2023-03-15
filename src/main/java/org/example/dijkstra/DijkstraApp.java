@@ -22,7 +22,7 @@ public class DijkstraApp {
         // Add adjacent nodes to each node
         tmpData.forEach(node -> {
             node.getAdjacents().forEach(adjacent -> list.get(node.getName())
-                    .addAdjacentNode(list.get(adjacent.getId()), adjacent.getDuration()));
+                    .addAdjacentNode(list.get(adjacent.getEstacio().getId()), adjacent.getTrain().getDuration()));
         });
 
         Dijkstra<String> dijkstra = new Dijkstra<>();
