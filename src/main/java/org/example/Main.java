@@ -48,8 +48,18 @@ public class Main {
 
     }
 
+    private static String tab() {
+        String tab = "";
+        for(int i = 0; i<nRecursiva; i++){
+            tab += "\t\t";
+        }
+        return tab;
+    }
+
+    static int nRecursiva = 0;
     private static void generarMapaBase() {
         stations.forEach(station -> {
+            if(!station.getName().equals("Geneva")) return;
             System.out.println("======================================================");
             // Obtenir trens que surten d'aquí
             List<Train> llistaBase = getAllTrainsLeavingFromStation(station.getId());
@@ -67,6 +77,7 @@ public class Main {
                 // Estacio arribada
 
                 System.out.println("Inici de recursiva");
+                nRecursiva = 0;
                 recursivaTest(t, mapa);
 
                 System.out.println("=============================================");
@@ -83,21 +94,25 @@ public class Main {
     }
 
     private static void recursivaTest(Train previousTrain, Map<Station,List<Adjacent>> mapa) {
-        System.out.println("---Obtenint trens vàlids desde "+previousTrain.getArrivalStation());
+        nRecursiva++;
+        System.out.println(tab()+"---Obtenint trens vàlids desde "+previousTrain.getArrivalStation());
         List<Train> llistaTrens = getValidTrains(previousTrain.getArrivalStation(), previousTrain.getArrivalTime());
         // Si hem arribat a una estacio final, atura la funció recursiva
         if (llistaTrens.isEmpty()) {
-            System.out.println("No s'han trobat trens, sortint de la recursiva...");
-            System.out.println("Afegint "+previousTrain.getArrivalStation()+" al mapa, sense adjacents abans de sortir...");
+            System.out.println(tab()+"No s'han trobat trens, sortint de la recursiva...");
+            // Problema. Entra en un bucle infinit, fins que arriba un punt que no hi ha més trens i per tant, la llista serà
+            // buida i lògicament sortirà d'aquí. No tenim manera de dir-li que pari a un punt determinat
+            System.out.println(tab()+"Afegint "+previousTrain.getArrivalStation()+" al mapa, sense adjacents abans de sortir...");
             mapa.put(previousTrain.getArrivalStation(),new ArrayList<>());
-            System.out.println("Sortint...");
+            System.out.println(tab()+"Sortint...");
+            nRecursiva--;
             return;
         }
 
         for (Train t : llistaTrens) {
-            System.out.println("Iterant sobre tren "+t);
+            System.out.println(tab()+"Iterant sobre tren "+t);
             if (!mapa.containsKey(t.getDepartureStation())) {
-                System.out.println("Estació "+t.getDepartureStation()+" no existeix al mapa, afegint-la...");
+                System.out.println(tab()+"Estació "+t.getDepartureStation()+" no existeix al mapa, afegint-la...");
                 mapa.put(t.getDepartureStation(), new ArrayList<>());
             }
             // Canviar això a un parse de data ben fet (preguntar Pau)
@@ -107,7 +122,7 @@ public class Main {
             int tempsTrajecteiEspera = (int) Math.abs(ChronoUnit.MINUTES.between(arrivalTime, prevStationArrTime));
 
             //Obtenir llista adjacents de la estacio actual
-            System.out.println("Obtenint llista adjacents del mapa...");
+            System.out.println(tab()+"Obtenint llista adjacents del mapa...");
             List<Adjacent> adjacentsEstacioAcual = mapa.get(t.getDepartureStation());
             for (Adjacent a : adjacentsEstacioAcual) {
                 if (a.getEstacio().equals(t.getArrivalStation()) &&
@@ -130,15 +145,16 @@ public class Main {
                     }
                 }
             }
-            System.out.println("Mapa fins ara...");
-            System.out.println("=============================================");
+
+            System.out.println(tab()+"Mapa fins ara...");
+            System.out.println(tab()+"=============================================");
             mapa.forEach((s, adj) -> {
-                System.out.println(s.getName()+" -> ");
+                System.out.println(tab()+s.getName()+" -> ");
                 adj.forEach(adjacent -> {
-                    System.out.println("\t"+adjacent);
+                    System.out.println(tab()+"\t"+adjacent);
                 });
             });
-            System.out.println("=============================================");
+            System.out.println(tab()+"=============================================");
 
             // Estacio arribada
             recursivaTest(t, mapa);
@@ -155,10 +171,10 @@ public class Main {
             // Si el tren en qüestió encara no ha sortit quan naltros arribem
             // llavors afegeix el tren a la llista de vàlids
             if (!departureTime.isBefore(prevStationArrTime)) {
-                System.out.println("Tren "+t+" és vàlid. Afegint a llista vàlids");
+                System.out.println(tab()+"Tren "+t+" és vàlid. Afegint a llista vàlids");
                 llista.add(t);
             } else {
-                System.out.println("Tren "+t+" NO vàlid. Descartat.");
+                System.out.println(tab()+"Tren "+t+" NO vàlid. Descartat.");
             }
         });
         return llista;
